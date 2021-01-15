@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>League Of Legends - Play now!</title>
+    <link rel="stylesheet" href="styler.css">
+    <meta name="description" content="All you need to know to play League of Legends today!"/>
+    <!-- Google font Ubuntu -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+        rel="stylesheet">
+    <!-- Symbols and stuff -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css">
+    <!-- JavaScript Library / has a lot of prewritten scripts and plugins -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- My own script file -->
+    <script src="scripts.js"></script>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="inner-width">
+            <a href="/" class="logo"><span class="sr-only">Visit Riot Games</span></a>
+            <!-- menu toggler when mobile layout is activated -->
+            <button class="menu-toggler">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <!-- All the links in the navbar goes to the responding page -->
+            <div class="navbar-menu">
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#news">News</a>
+                <a href="#signup">Sign Up</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </div>
+    </nav>
+    <!-- Home -->
+    <section id="home">
+        <div class="inner-width">
+            <div class="content">
+                <h1>League of Legends</h1>
+            </div>
+        </div>
+    </section>
+    <!-- About -->
+    <section id="about">
+        <div class="inner-width">
+            <h1 class="section-title">League of Legends</h1>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>League of Legends is a team-based strategy game where two teams of five powerful champions face
+                        off to destroy the other’s base. Choose from over 140 champions to make epic plays, secure
+                        kills, and take down towers as you battle your way to victory.</p><br>
+                    <h2>Destroy the enemy Nexus</h2>
+                    <p>The Nexus is the heart of both teams’ bases. Destroy the enemy’s Nexus first to win the game.</p>
+                    <br>
+                    <a href="images/nexus.gif" class="aboutimg">
+                        <img style="border-radius: 6px;" src="images/nexus.gif" alt="Nexus base crystal and towers.">
+                    </a><br>
+                    <h2>Clear the path</h2>
+                    <p>Your team needs to clear at least one lane to get to the enemy Nexus. Blocking your path are
+                        defense structures called turrets and inhibitors. Each lane has three turrets and one inhibitor,
+                        and each Nexus is guarded by two turrets.</p><br>
+                    <h2>Take on the Jungle</h2>
+                    <p>In between the lanes is the jungle, where neutral monsters and jungle plants reside. The two most
+                        important monsters are Barons Nashor and the Drakes. Killings these units grants unique buffs
+                        for your team and can also turn the tide of the game.</p><br>
+                    <a href="images/baron.jpg" class="aboutimg">
+                        <img style="border-radius: 6px;" src="images/baron.jpg" alt="Baron monster.">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--News-->
+    <section class="dark" id="news">
+        <h1 class="section-title">News</h1>
+        <!--Element för textbox Artikel 1-->
+            <div class="news-content">
+                <article class="news-text" style="border-radius: 6px;">    
+                    <h3>League of Legends Code Of Conduct</h3>
+                        <p>As we continue to build League of Legends with our global community, we ask all community members to agree to the expectations outlined here. This Code of Conduct for League of Legends is supplemental to the Riot Games Terms of Service, which you must agree to before being allowed into any Riot game.</p>
+                    <div class="flexButton1">
+                        <button class="newsBtn" type="button"><span>Read Post</span></button>
+                    </div>
+                </article>
+                <article class="news-text" style="border-radius: 6px;">
+                    <h3>TFT Galaxies Championship Co-streaming Policy</h3>
+                        <p>For the first time ever, the best players in the world will be recognized with a global event to celebrate their effort in mastering Teamfight Tactics. To help celebrate with our entire TFT community, we are allowing select creators to co-stream the event. Starting September 3rd, players will now have a choice to tune in to the official broadcast (Twitch.tv/RiotGames) or to their favorite creators channels to see all the action.</p>
+                    <div class="flexButton1">
+                        <button class="newsBtn" type="button"><span>Read Post</span></button>
+                    </div>
+                </article>
+                <article class="news-text" style="border-radius: 6px;">
+                    <h3>State Farm Cosplay Contest Finalists</h3>
+                        <p>With LCS Summer Finals only a few weeks away, its time to announce the finalists for the State Farm Cosplay Contest.
+                        This year we had over 50 submissions from Cosplayers across NA, all competing to win the grand prize of $5,000 and a round trip ticket for them and a friend to an international esports event of their choice. Additionally, 2nd place will receive $2,000, with 3rd place being awarded $1,000. You as an audience will also get to vote, on social media, for your fan favorite, who wins an additional $500.</p>
+                    <div class="flexButton1">
+                        <button class="newsBtn" type="button"><span>Read Post</span></button>
+                    </div>
+                </article>
+            </div>
+    </section>
+    <!-- Sign Up -->
+    <section id="signup">
+        <div class="inner-width">
+            <h1 class="section-title">Sign Up</h1>
+            <div id="signuptext">
+                <p>Sign Up to play League of Legends now!</p>
+            </div>
+            <form action="#" class="signup-form">
+                <input type="text" class="nameZone" placeholder="Your Full Name">
+                <input type="email" class="emailZone" placeholder="Your Email">
+                <input type="text" class="usernameZone" placeholder="Username">
+                <input type="password" class="passwordZone" placeholder="Password">
+                <input type="submit" value="Download Game" id="dwnld" class="btn"
+                    onclick="window.location='https://signup.eune.leagueoflegends.com/en/signup/redownload?page_referrer=index'">
+                <input type="submit" value="Sign Up" id="sndmsg" class="btn">
+            </form>
+        </div>
+    </section>
+    <!-- Filler image Section -->
+    <div class="fillerImg">
+        <picture>
+            <source media="(min-width: 600px)" srcset="images/Katarina_608.png">
+            <img src="images/Katarina_304.png" alt="Redhaired woman swinging two swords" style="border-radius: 6px;"/>
+        </picture>
+    </div>
+    <!-- Contact Section -->
+    <section class="dark" id="contact">
+        <h1 class="section-title">Got a Question?</h1>
+        <div class="contactBox">
+            <!-- Contact Form -->
+            <div class="form">
+                <h2 class="contactHeading">What do you want to know?</h2>
+
+                <form class="contactUs">
+                    <label for="fname">Name:</label><br>
+                        <input type="text" id="fname" name="fname"><br>
+                    <label for="email">Email:</label><br>
+                        <input type="email" id="email" name="email"><br>
+                    <label for="subject">Choose a subject:</label><br>
+                        <select id="subject" name="subject">
+                            <option value="subject">Choose a Subject</option>
+                            <option value="register">Questions regarding Registration</option>
+                            <option value="download">Questions regarding Download</option>
+                            <option value="jobs">Questions regarding Job openings</option>
+                            <option value="other">Other Questions</option>
+                        </select><br>
+                    <label for="message">Message:</label><br>
+                        <textarea name="message" id="message" rows="5" cols="50" ></textarea><br>
+                    <div class="flexButton2">
+                        <button class="sendMsg" type="submit" value="submit">Send Message</button>
+                    </div>
+                </form>
+            </div>
+            <!-- Google Maps -->
+            <div class="mapWrap">
+                <iframe class="googleMap" src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d56673.83907680304!2d-81.2333945006432!3d41.70861131444931!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ssv!2sse!4v1599913153069!5m2!1ssv!2sse" width="300" height="300" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+            </div>
+            <!-- Address-Section -->
+            <div class="addressWrap1">
+                <address class="address-1">
+                    <p>Riot Games<br>
+                    456 Bridgeton St.<br>
+                    Painesville, OH 44077<br>
+                    USA</p>
+                </address>
+            </div>
+            <!-- Social Media Buttons -->
+            <div class="soMeWrap">
+                <ul class="listBtn">
+                    <li class="soMeBtn">
+                        <a href="https://sv-se.facebook.com/leagueoflegends" class="fab fa-facebook"><span class="sr-only">Visit our Facebook</span>
+                        </a>
+                    <li class="soMeBtn">
+                        <a href="https://twitter.com/leagueoflegends" title="Twitter" class="fab fa-twitter"><span class="sr-only">Visit our Twitter</span>
+                        </a>
+                    </li>
+                    <li class="soMeBtn">
+                        <a href="https://www.twitch.tv/directory/game/League%20of%20Legends" class="fab fa-twitch"><span class="sr-only">Visit our Twitch</span>
+                        </a>
+                    </li>
+                    <li class="soMeBtn">
+                        <a href="https://www.instagram.com/leagueoflegends/" class="fab fa-instagram"><span class="sr-only">Visit our Instagram</span>
+                        </a>
+                    </li>
+                </ul>
+            </div> 
+        </div>
+    </section>
+    <!-- Footer -->
+    <footer>
+        <div class="inner-width">
+            <div class="copyright">
+                Copyright &copy; & &trade; 2020 | <a href="https://www.riotgames.com/en">Riot Games, Inc.</a> League of
+                Legends and all related logos, images, characters and names are
+                exclusive property of Riot Games, Inc. All rights reserved.
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

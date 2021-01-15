@@ -1,0 +1,657 @@
+*{
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  font-family: "Ubuntu",sans-serif;
+  box-sizing: border-box;
+}
+html{
+  /* When you press a link it doesnt teleport to that place but instead smoothly scrolls to it */
+  scroll-behavior: smooth;
+}
+.navbar{
+  position: fixed;
+  background-color: transparent;
+  width: 100%;
+  padding: 30px 0;
+  top: 0;
+  z-index: 999;
+  transition: .3s linear;
+}
+/* the space where the content is laid in*/
+.inner-width{
+  max-width: 1300px;
+  margin: auto;
+  padding: 0 40px;
+}
+.navbar .inner-width{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.logo{
+  width: 44px;
+  height: 32px;
+  background-image: url(images/logo.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.menu-toggler{
+  background: none;
+  width: 30px;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  outline: none;
+  z-index: 999;
+  display: none;
+}
+.menu-toggler span{
+  display: block;
+  height: 3px;
+  background-color: #111;
+  margin: 6px 0;
+  position: relative;
+  transition: .3s linear;
+}
+.navbar-menu a{
+  color: #111;
+  font-size: 15px;
+  font-weight: 500;
+  margin-left: 30px;
+  transition: .2s linear;
+}
+.navbar-menu.active a:hover{
+  color: #0BC4E2 !important;
+}
+.sticky{
+  background-color: #F7F7F7;
+  padding: 18px 0;
+}
+.sticky .logo{
+  background-image: url(images/logo.png);
+}
+#home{
+  height: 100vh;
+  min-height: 500px;
+  background: url(images/bg.jpg) no-repeat center;
+  background-size: cover;
+  background-attachment: fixed;
+  background-color: #061C25;
+}
+#home .inner-width{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  text-align: center;
+}
+#home .content{
+  width: 100%;
+  color: #F7F7F7;
+}
+#home .content h1{
+  font-size: 60px;
+  margin-bottom: 60px;
+}
+section{
+  padding: 100px 0;
+  background-color: #F9F9F9;
+}
+.section-title{
+  text-align: center;
+  margin-bottom: 20px;
+  position: relative;
+  font-size: 26px;
+  padding-bottom: 20px;
+  color: #111;
+}
+/* creates a pseudo element that is the first child of the h1 elemnt, which will create the black line under the h1 */
+.section-title::before{
+  content: "";
+  position: absolute;
+  width: 80px;
+  height: 3px;
+  background-color: #111;
+  bottom: 0;
+  left: calc(50% - 40px);
+}
+/* creates a pseudo element that is the last child of the h1 element, which will create the blue box on the line under the h1 */
+.section-title::after{
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 10px;
+  background-color:#0BC4E2;
+  border: 4px solid #F9F9F9;
+  left: calc(50% - 12px);
+  bottom: -7px;
+}
+/* same as the css above but dark instead */
+section.dark{
+  background-color: #061C25;
+}
+section.dark .section-title{
+  color: #F9F9F9;
+}
+section.dark .section-title::before{
+  background-color: #F9F9F9;
+}
+section.dark .section-title::after{
+  border: 4px solid #061C25;
+}
+.about-content{
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  text-align: left !important;
+}
+.about-text{
+  flex: 1;
+  text-align: center;
+  padding-top: 0;
+}
+.about-text h2{
+  margin: 10px 0;
+  color: #444;
+  font-size: 16px;
+}
+.about-text p{
+  font-size: 17px;
+  text-align: center;
+  line-height: 26px;
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.aboutimg img{
+  width: 55%;
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+}
+/* News Section */
+#news{
+  background-color: #061C25;
+}
+.news-content{
+  display: flex;
+  position: relative;
+  width: 100%;
+  align-content: space-around;
+  background-size: cover;
+  padding-bottom: 50px;
+}
+.news-text{
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  border: solid 2px black;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 50px 10px 70px 10px;
+  background-color: #c1d2d3;
+  transition: all .2s ease-in-out;
+}
+/* Hover effect for Article elements */
+.news-text:hover{
+  transform: scale(1.03);
+  background-color: #000A0D;
+  color: #ffffff;
+  border: 0.3px #9b9b9baf outset;
+}
+.news-text h3{
+  padding-bottom: 15px;
+  margin-top: 10px;
+  text-shadow: 1px 0px 1px #111;
+}
+.news-text:hover h3{
+  text-shadow: 1px 0px 1px #f5f0f0;
+}
+.news-text p{
+  flex-grow: 1;
+}
+/* Article Button effects and styles */
+.flexButton1{
+  display: flex;
+  flex-direction: column-reverse;
+  width: 100%;
+  align-items: flex-end;
+  margin-bottom: 5px;
+  padding-top: 10px;
+  padding-right: 3px;
+  transition: all .2s ease-in-out;
+}
+.newsBtn{
+  width: 180px;
+  color: #fff;
+  font-size: 16px;
+  border: 1px outset #2a2929e7;
+  padding: 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: .3s linear;
+  background-color: #497687;
+}
+.newsBtn:hover{
+  border: 2.5px outset #44cceb;
+  background-color:#0bc4e2;
+  color: #F7F7F7;
+}
+.newsBtn:active{
+  background-color: #5c5d5d;
+  border: 2.5px inset;
+  transition: .2s linear;
+  text-shadow: rgba(0,0,0,0.5) -1px 0, rgba(0,0,0,0.3) 0 -1px, rgba(255,255,255,0.5) 0 1px, rgba(0,0,0,0.3) -1px -2px;
+}
+#signuptext{
+  font-size: 16px;
+  color: #000;
+  margin-bottom: 20px;
+  text-align: center;
+}
+.signup-form{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.signup-form input{
+  width: 100%;
+  height: 50px;
+  margin: 10px 0;
+  background-color: #061C25;
+  border: none;
+  outline: none;
+  padding: 20px;
+  border-radius: 4px;
+  color: #F9F9F9;
+}
+.nameZone, .emailZone, .usernameZone, .passwordZone{
+  max-width: calc(50% - 10px);
+}
+.signup-form .btn{
+  width: 180px;
+  background-color: transparent;
+  color:#0bc4e2;
+  font-size: 16px;
+  border: 2px solid#0bc4e2;
+  padding: 0;
+  cursor: pointer;
+  transition: .3s linear;
+}
+.signup-form .btn:hover{
+  background-color:#0bc4e2;
+  color: #F7F7F7;
+}
+#dwnld.btn{
+  order: 1;
+}
+#sndmsg.btn{
+  order: 2;
+}
+/* Filler image alignment and Header-visibility */
+
+.fillerImg{
+  text-align: center;
+  border-radius: 6px;
+  margin-bottom: 100px;
+  background-color: #F9F9F9;
+}
+/* Contact Section */
+#contact{
+  background-color: #061C25;
+}
+/* Button styling */
+.fab{
+  color: #F7F7F7;
+}
+.soMeBtn > a{
+  text-decoration: none;
+}
+li .fab{
+  list-style: none;
+}
+.listBtn{
+  padding-left: 0;
+  display: flex;
+  justify-content: space-around;
+}
+/* Content for Contact-Grid */
+.contactBox {
+  display: grid;
+  height: auto;
+  grid-gap: 10px;
+  width: 100%;
+  grid-template-areas:
+  "header"
+  "form"
+  "map"
+  "address"
+  "buttons";
+  margin: auto;
+  background-color: #061C25;
+  padding: 10px;
+  max-width: 100vw;
+}
+.contactHeading {
+  grid-area: header;
+  padding: 5px;
+  color: #f7f7f7;
+  margin-bottom: 45px;
+  font-size: 20px;
+}
+.contactUs{
+  grid-area: form;
+  /* padding: 0px 5px 20px 5px; */
+  color: #f7f7f7;
+}
+#subject{
+  width: 100%;
+  height: 50px;
+  padding: 3px;
+  margin: 10px 0;
+  background-color: #F7F7F7;
+  border: none;
+  outline: none;
+  border-radius: 4px;
+}
+#message{
+  width: 100%;
+  height: 50px;
+  font-size: 12px;
+  padding: 3px;
+  margin: 10px 0;
+  background-color: #F7F7F7;
+  border: none;
+  outline: none;
+  border-radius: 4px; 
+}
+.contactUs input{
+  width: 100%;
+  height: 50px;
+  padding: 20px;
+  margin: 10px 0;
+  background-color: #F7F7F7;
+  border: none;
+  outline: none;
+  border-radius: 4px;
+  color: #061C25;
+}
+/* Google Maps content */
+.mapWrap{
+  grid-area: map;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  padding-top: 50%;  
+}
+.googleMap{
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  max-width: 599px;
+  display: block;
+  margin: auto;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.addressWrap1{
+  grid-area: address;
+  padding: 10px 10px 5px 5px;
+  display: flex;
+  justify-content: flex-start;
+  color: #F7F7F7;
+}
+.soMeWrap{
+  grid-area: buttons;
+  text-align: center;
+}
+/* Submit Button styles */
+.sendMsg{
+  width: 180px;
+  height: 40px;
+  background-color: transparent;
+  color:#0bc4e2;
+  font-size: 16px;
+  border: 2px solid#0bc4e2;
+  padding: 0;
+  cursor: pointer;
+  transition: .3s linear;
+  border-radius: 4px;
+}
+.sendMsg:hover{
+  background-color:#0bc4e2;
+  color: #F7F7F7;
+}
+.flexButton2{
+  display: flex;
+  flex-direction: column-reverse;
+  width: 100%;
+  align-items: flex-end;
+  margin-bottom: 5px;
+  padding-top: 10px;
+  padding-right: 3px;
+}
+/* Social Media Buttons */
+.soMeBtn{
+  display: inline-flex;
+  font-size: 30px;
+  margin-top:50px;
+}
+footer{
+  background: url(images/bg.jpg) no-repeat center;
+  background-size: cover;
+  color: #F7F7F7;
+  padding: 80px 0;
+  text-align: center;
+  background-color: #061C25;
+}
+.copyright{
+  margin-bottom: 20px;
+  font-size: 15px;
+}
+.copyright a{
+  font-size: 16px;
+  color:#0bc4e2;
+  font-weight: 500;
+}
+/* Tablet Format */
+@media screen and (min-width: 600px){
+  .contactBox{
+      grid-template-columns: 49% 49%;
+      grid-template-rows: auto auto;
+      justify-content: center;
+      max-width: 100vw;
+  }
+  #message{
+    max-width: 270px;
+  }
+  .contactHeading {
+      grid-area: 1 / 1;
+      align-self: flex-start;
+  }
+  .contactUs{
+      grid-area: 1 / 1;
+      align-self: center;
+  }
+  .mapWrap{
+      grid-area: 1 / 2;
+  }
+  .googleMap{
+      margin-top: 105px;
+      width: 110%;
+      height: 378px;
+  }
+  .addressWrap1{
+      grid-area: 2 / 2;
+      display: flex;
+      justify-content: flex-end;
+  }
+  .address-1{
+      text-align: right;
+      height: 50px;
+      align-self: center;
+      padding-top: 40px;
+  }
+  .soMeWrap{
+      grid-area: 2 / 1;
+      justify-self: auto;
+      align-self: center;
+      height: 50px;
+      margin-top: 55px;
+  }
+}
+
+@media (min-width: 1000px){
+  .contactBox{
+    grid-template-columns: 38% 38% 25%;
+    grid-template-rows: auto;
+    max-width: 100vw;
+  }
+  .contactHeading {
+    grid-area: 1 / 1;
+    padding-left: 20px;
+  }
+  .contactUs{
+    grid-area: 1 / 1;
+    padding-left: 20px;
+  }
+  .mapWrap{
+    grid-area: 1 / 2;
+  }
+  .addressWrap1{
+    grid-area: 1 / 3;
+    padding-top: 0;
+    align-content: center;
+    justify-self: flex-start;
+  }
+  .soMeWrap{
+    grid-area: 1 / 3;
+    align-self: flex-end;
+    padding-bottom: 20px;
+    margin-bottom: 40px;
+  }
+  .googleMap{
+    height: 100%;
+  }
+  .address-1{
+      text-align: left;
+      height: 100px;
+      padding-left: 10px;
+      align-self: flex-start;
+      padding-top: 103px;
+  }
+  .soMeBtn{
+      display: flex;
+      /* padding-top: 62px; */
+  }
+}
+
+/* desktop media screen */
+@media screen and (max-width: 980px){
+  .menu-toggler{
+    display: block;
+  }
+  .navbar-menu{
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+    background-color: #061C25;
+    top: 0;
+    right: -100%;
+    max-width: 400px;
+    padding: 80px 50px;
+    transition: .3s linear;
+  }
+  .navbar-menu a{
+    display: block;
+    font-size: 30px;
+    margin: 30px 0;
+  }
+  .navbar-menu.active{
+    right: 0;
+  }
+  /* makes the 3 lines into an X */
+  .menu-toggler.active span:nth-child(1){
+    transform: rotate(-45deg);
+    top: 4px;
+    background-color: #F9F9F9;
+  }
+  .menu-toggler.active span:nth-child(2){
+    opacity: 0;
+  }
+  .menu-toggler.active span:nth-child(3){
+    transform: rotate(45deg);
+    bottom: 14px;
+    background-color: #F9F9F9;
+  }
+  .inner-width{
+    max-width: 800px;
+  }
+  .about-text{
+    flex: 100%;
+    text-align: center;
+  }
+  .block{
+    width: calc(100% - 20px);
+    margin-left: auto;
+  }
+  .about{
+    width: calc(50% - 10px);
+  }
+  .news-content{
+    display: block;
+    width: calc(100% - 20px);
+    margin: auto;
+  }
+  .news-text{
+    flex: 100%;
+    margin: 10px 5px 10px 5px;
+  }
+}
+/* mobile media screen */
+@media screen and (max-width: 600px){
+  .inner-width{
+    padding: 0 20px;
+  }
+  .about-text{
+    overflow: auto;
+  }
+  .aboutimg img{
+    width: 100%;
+  }
+  .nameZone, .emailZone, .usernameZone, .passwordZone{
+    max-width: calc(100% - 10px);
+  }
+  .signup-form .btn{
+    margin-right: auto;
+    margin-left: auto;
+  }
+  .navbar-menu a{
+    color: #F9F9F9;
+  }
+  /* Makes the nav menu 75% of the mobile width */
+  .navbar-menu.active{
+    width: 75%;
+  }
+  #dwnld.btn{
+    order: 2;
+  }
+  #sndmsg.btn{
+    order: 1;
+  }
+  .news-content{
+    display: block;
+    max-width: 599px;
+  }
+  .news-text{
+    margin: 5px 0px 5px 0px;
+  }
+}
